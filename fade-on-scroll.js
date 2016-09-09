@@ -9,7 +9,7 @@ fading = $('header'); // Element to fade, can be ID, class or tag
 opacityDifference = opacityEnd-opacityStart;  // Difference between opacityEnd and opacityStart
 fadeMultiplier = fadeStart/fadeUntil,         // Ratio of fadeStart to fadeUntil
 
-$(window).bind('scroll', function(){    // Begin scroll function
+$(window).on("load scroll",function(e){    // Begin function on load and on scroll
   var offset = $(document).scrollTop()  // Set offset variable to current pixel distance from top of document
   ,opacity=0;                           // Initialize opacity at 0
   
